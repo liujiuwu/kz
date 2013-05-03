@@ -1,7 +1,7 @@
 function item_masonry() {
 	$('.items').masonry({
 		itemSelector : '.masonry_brick',
-		gutterWidth : 20
+		gutterWidth : 17
 	});
 
 	$("img.lazy").lazyload({

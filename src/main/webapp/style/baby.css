@@ -6,6 +6,37 @@ body {
 	padding-top:40px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 微软雅黑,"Microsoft Yahei",Arial,Helvetica,Verdana,sans-serif;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+h4, h5, h6 {
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 16px;
+}
+h3 {
+    font-size: 14px;
+}
+h4 {
+    font-size: 15px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
 #logo {
 	padding: 10px 10px;
 	
@@ -29,7 +60,7 @@ a:hover {
 
 
 .navbar .brand {
-color:#fff;
+color:#e26;
 }
 
 
@@ -120,7 +151,7 @@ color:#fff;
 .item {
 	width: 200px;
 	padding: 10px;
-	margin: 10px 0;
+	margin-bottom: 17px;
 	background: #fff;
 	//border-radius: 4px 4px 4px 4px;
 	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
@@ -167,7 +198,6 @@ color:#fff;
 	cursor: pointer;
 	text-align: center;
 	border: 1px solid #EAEAEA;
-	border-radius: 4px 4px 4px 4px;
 	margin-left: 5px;
 	padding: 5px;
 	background: #D93232;
@@ -292,6 +322,7 @@ body{
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
 	color: #e26;
+
 }
 
 #sidebar{
@@ -774,4 +805,44 @@ overflow: hidden;
     background-image: linear-gradient(to bottom, #C52258, #C52258);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#C52258', endColorstr = '#C52258', GradientType = 0);
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus 
+{
+	font-weight:bold;
+}
+
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus 
+{
+	font-weight:bold;
+	//text-shadow:none;
+}
+
+
+
+#recommend_bar {
+    border-bottom: 1px solid #E5E5E5;
+    margin: 10px 0;
+    min-height: 20px;
+    padding: 5px 0 5px;
+    position: relative;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+}
+#recommend_bar:after {
+    border-bottom: 1px solid white;
+    bottom: -2px;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#recommend_bar h2{
+  margin:0;
+  padding:0;
+  font-size:16px;
+  color:#e26;
+  line-height:20px;
 }

@@ -22,7 +22,7 @@ class IndexSnippet extends MyPaginatorSnippet[TaobaoItem] {
 
   private def pf = S.param("pf").map(_.toString()) openOr "qzone"
 
-  override val itemsPerPage = 30
+  override val itemsPerPage = 10
   override def count = TaobaoItem.count(By(TaobaoItem.cid, cid))
   override def page = TaobaoItem.findAll(By(TaobaoItem.cid, cid), By(TaobaoItem.isSpread, true), StartAt(curPage * itemsPerPage), MaxRows(itemsPerPage))
   //override def page = TaobaoItem.itemsCache.get(cid).get.slice(curPage * itemsPerPage, curPage * itemsPerPage + itemsPerPage)
@@ -47,7 +47,7 @@ class IndexSnippet extends MyPaginatorSnippet[TaobaoItem] {
         "title" -> item.title,
         "price" -> item.price,
         "volume" -> item.volume,
-        "go" -> <a href={ item.clickUrl.is } target="_blank" class="go"><i class="icon-chevron-right"></i>&nbsp;去看看</a>,
+        "go" -> <a href={ item.clickUrl.is } target="_blank" class="go"><i class="icon-chevron-right"></i>&nbsp;访问</a>,
         "image" -> <a href={ item.clickUrl.is } target="_blank"><img class="lazy" src="/images/grey.gif" data-original={ item.picUrl + picSuffix }/></a>))
 
   }*/
@@ -59,7 +59,7 @@ class IndexSnippet extends MyPaginatorSnippet[TaobaoItem] {
         ".item-img" #> <a href="javascript://" onclick={ "goto('" + item.clickUrl.is + "');return false;" }><img class="lazy" src="/images/grey.gif" data-original={ item.picUrl + picSuffix }/></a> &
         "#price" #> item.price.is &
         "#volume" #> item.volume.is &
-        ".go" #> <a href="javascript://" onclick={ "goto('" + item.clickUrl.is + "');return false;"} class="go"><i class="icon-chevron-right"></i>&nbsp;去看看</a> 
+        ".go" #> <a href="javascript://" onclick={ "goto('" + item.clickUrl.is + "');return false;"} class="go"><i class="icon-external-link"></i>&nbsp;访问</a> 
     })
 
   }
